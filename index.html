@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klinik Sehat Sejahtera - Beranda</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Klinik Sehat Sejahtera</h1>
+        <p>Melayani dengan Sepenuh Hati</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#layanan">Layanan Kami</a></li>
+            <li><a href="#registrasi">Pendaftaran Pasien</a></li>
+            <li><a href="#produk-dinamis">Daftar Produk</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        
+        <section id="layanan">
+            <h2>Layanan Unggulan Kami</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Poli Umum</h3>
+                    <p>Pemeriksaan kesehatan rutin dan konsultasi dokter umum yang ramah.</p>
+                </div>
+                <div class="card">
+                    <h3>Poli Gigi</h3>
+                    <p>Perawatan gigi, scaling, cabut gigi, dan penambalan profesional.</p>
+                </div>
+                <div class="card">
+                    <h3>Laboratorium</h3>
+                    <p>Cek darah, kolesterol, dan tes kesehatan lengkap dengan hasil cepat.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="registrasi">
+            <h2>Registrasi Pengguna Baru</h2>
+            <form id="formRegistrasi" novalidate>
+                
+                <div class="form-group">
+                    <label for="nama">Nama Lengkap (Wajib):</label>
+                    <input type="text" id="nama" placeholder="Masukkan nama lengkap">
+                    <span class="error-message" id="errorNama"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email (Format Valid):</label>
+                    <input type="email" id="email" placeholder="contoh@email.com">
+                    <span class="error-message" id="errorEmail"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="telepon">Nomor Telepon (Harus Positif):</label>
+                    <input type="number" id="telepon" placeholder="Contoh: 0812345678">
+                    <span class="error-message" id="errorTelepon"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="dokter">Pilih Dokter Spesialis:</label>
+                    <select id="dokter">
+                        <option value="">-- Pilih Dokter --</option>
+                        <option value="dr_andi">dr. Andi (Umum)</option>
+                        <option value="dr_budi">dr. Budi (Gigi)</option>
+                    </select>
+                    <span class="error-message" id="errorDokter"></span>
+                </div>
+
+                <div class="form-group">
+                    <label>Jenis Kelamin:</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="jk" value="L"> Laki-laki</label>
+                        <label><input type="radio" name="jk" value="P"> Perempuan</label>
+                    </div>
+                    <span class="error-message" id="errorJk"></span>
+                </div>
+
+                <button type="submit">Daftar Sekarang</button>
+            </form>
+        </section>
+
+        <section id="produk-dinamis">
+            <h2>Daftar Produk & Layanan Klinik</h2>
+            
+            <div class="add-item-form">
+                <input type="text" id="inputNamaProduk" placeholder="Nama Produk/Layanan">
+                <input type="number" id="inputHargaProduk" placeholder="Harga (Rp)">
+                <button id="btnTambahProduk">Tambah Item</button>
+            </div>
+
+            <div id="daftarItemContainer" class="card-container">
+                </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Klinik Sehat Sejahtera. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
